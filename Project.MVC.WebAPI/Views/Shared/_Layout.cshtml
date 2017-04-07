@@ -6,8 +6,10 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/angularjs")
+    @Scripts.Render("~/bundles/vehicleApp")
 </head>
-<body>
+<body ng-app="app">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -26,8 +28,11 @@
             </div>
         </div>
     </div>
+    <div ui-view="root">
+     @RenderBody()
+    </div>
     <div class="container body-content">
-        @RenderBody()
+        
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
