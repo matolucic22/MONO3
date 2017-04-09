@@ -1,7 +1,7 @@
-﻿<div class="container" ng-controller="VehicleMakeController" >
-        <h1>Vehicle Make</h1>
+﻿<div class="container" ng-controller="VehicleModelController" >
+        <h1>Vehicle Model</h1>
         <div style="text-align: right">
-            <a ui-sref="AddvehicleMake">Create Vehicle Make</a>
+            <a ui-sref="AddvehicleModel">Create Vehicle Model</a>
         </div>
         <!--  <form class="form-inline">
               <div class="form-group">
@@ -17,23 +17,30 @@
                         Id
                     </th>
                     <th>
+                        VehicleMakeId
+                    </th>
+                    <th>
                         Name
                     </th>
                     <th>
                         Abrv
                     </th>
-                    <th></th>
+                    <th>
+      
+                    </th>
+                    
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="make in makes">
-                    <td>{{make.VehicleMakeId}}</td>
-                    <td>{{make.Name}}</td>
-                    <td>{{make.Abrv}}</td>
-                    <td>
-                        <a ui-sref="EditvehicleMake({VmkId: make.VehicleMakeId})">Edit</a>
-                        <a ui-sref="DetailsvehicleMake({VmkId: make.VehicleMakeId})">Details</a>
-                        <a ui-sref="DeletevehicleMake({VmkId: make.VehicleMakeId})">Delete</a>
+                <tr ng-repeat="model in models">
+                    <td>{{model.VehicleModelId}}</td>
+                    <td>{{model.VehicleMakeId}}</td>
+                    <td>{{model.Name}}</td>
+                    <td>{{model.Abrv}}</td>
+                   <td>
+                       <a ui-sref="EditvehicleModel({VmdlId: model.VehicleModelId})">Edit</a>
+                       <a ui-sref="DetailsvehicleModel({VmdlId: model.VehicleModelId})">Details</a>
+                       <a ui-sref="DeletevehicleModel({VmdlId: model.VehicleModelId})">Delete</a>
                     </td>
                 </tr>
             </tbody>
@@ -43,7 +50,8 @@
                                  boundary-links="true">
         </dir-pagination-controls>
         <br />
-         <button ui-sref="vehicleModel" class="btn">
-             Vehicle Model
+
+         <button ui-sref="vehicleMake" class="btn">
+             Vehicle Make
          </button>
     </div>
