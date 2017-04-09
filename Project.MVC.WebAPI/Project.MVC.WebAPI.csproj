@@ -232,7 +232,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\Controllers\VehicleMake\AddVehicleMakeController.js" />
+    <Content Include="app\Controllers\VehicleMake\DeleteVehicleMakeController.js" />
+    <Content Include="app\Controllers\VehicleMake\DetailsVehicleMakeController.js" />
+    <Content Include="app\Controllers\VehicleMake\EditVehicleMakeController.js" />
     <Content Include="app\Controllers\VehicleMake\VehicleMakeController.js" />
+    <Content Include="app\Views\VehicleMake\AddVehicleMake.html" />
+    <Content Include="app\Views\VehicleMake\DeleteVehicleMake.html" />
+    <Content Include="app\Views\VehicleMake\DetailsVehicleMake.html" />
+    <Content Include="app\Views\VehicleMake\EditVehicleMake.html" />
     <Content Include="app\Views\VehicleMake\IndexVehicleMake.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
