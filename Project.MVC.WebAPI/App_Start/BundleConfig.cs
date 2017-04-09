@@ -13,7 +13,8 @@ namespace Project.MVC.WebAPI
 
             bundles.Add(new ScriptBundle("~/bundles/angularjs").Include(
                         "~/Scripts/angular.js",
-                       "~/Scripts/angular-ui-router.js"));
+                        "~/Scripts/angular-ui-router.js",
+                        "~/Scripts/dirPagination.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/vehicleApp").Include(
                 "~/app/app.js",

@@ -9,4 +9,9 @@
         }, function () {
             console.log("Can't get reponse.");
         });
+    $scope.sort=function(keyname)
+    {
+        $scope.sortKey = keyname;
+        $scope.reverse = !$scope.reverse;//if true make it false and vice versa
+    }
 });

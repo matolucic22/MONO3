@@ -3,36 +3,37 @@
         <div style="text-align: right">
             <a ui-sref="AddvehicleModel">Create Vehicle Model</a>
         </div>
-        <!--  <form class="form-inline">
-              <div class="form-group">
-                  <label>Search</label>
-                  <input type="text" ng-model="search" class="form-control" placeholder="Search">
-              </div>
-          </form>-->
+        <form class="form-inline">
+            <div class="form-group">
+                <label>Search</label>
+                <input type="text" ng-model="search" class="form-control" placeholder="Search">
+            </div>
+        </form>
         <br />
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
-                    <th>
-                        Id
+                    <th ng-click="sort('VehicleModelId')" style="cursor:pointer">
+                        ID
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='VehicleModelId'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
                     </th>
-                    <th>
-                        VehicleMakeId
+                    <th ng-click="sort('VehicleMakeID')" style="cursor:pointer">
+                        VehicleMakeID
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='VehicleMakeID'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
                     </th>
-                    <th>
+                    <th ng-click="sort('Name')" style="cursor:pointer">
                         Name
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='Name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
                     </th>
-                    <th>
+                    <th ng-click="sort('Abrv')" style="cursor:pointer">
                         Abrv
+                        <span class="glyphicon sort-icon" ng-show="sortKey=='Abrv'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
                     </th>
-                    <th>
-      
-                    </th>
-                    
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="model in models">
+                <tr dir-paginate ="model in models | filter:search | orderBy:sortKey:reverse | itemsPerPage:5">
                     <td>{{model.VehicleModelId}}</td>
                     <td>{{model.VehicleMakeId}}</td>
                     <td>{{model.Name}}</td>
