@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace DAL
 {
-   class VehicleInitializer: System.Data.Entity.DropCreateDatabaseIfModelChanges<VehicleContext>
+  class VehicleInitializer: System.Data.Entity.DropCreateDatabaseIfModelChanges<VehicleContext>
     {
         protected override void Seed(VehicleContext context)
          {
-             var VehicleMakes = new List<VehicleMake>
+            var VehicleMakes = new List<VehicleMake>
              {
                  new VehicleMake {VehicleMakeId = Guid.NewGuid() ,Name="Skoda", Abrv="Skoda"}
 
