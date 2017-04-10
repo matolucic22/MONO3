@@ -39,9 +39,9 @@
                     <td>{{model.Name}}</td>
                     <td>{{model.Abrv}}</td>
                    <td>
-                       <a ui-sref="EditvehicleModel({VmdlId: model.VehicleModelId})">Edit</a>
+                       <a ui-sref="EditvehicleModel({VmdlId: model.VehicleModelId, VmkId: model.VehicleMakeId})">Edit</a>
                        <a ui-sref="DetailsvehicleModel({VmdlId: model.VehicleModelId})">Details</a>
-                       <a ui-sref="DeletevehicleModel({VmdlId: model.VehicleModelId})">Delete</a>
+                       <a ui-sref="DeletevehicleModel({VmdlId: model.VehicleModelId})">Delete</a><!---->
                     </td>
                 </tr>
             </tbody>

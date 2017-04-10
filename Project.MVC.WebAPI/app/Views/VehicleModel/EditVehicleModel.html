@@ -1,7 +1,8 @@
-﻿<form ng-controller="EditVehicleModelController" name="vmdlEditForm" ng-init="updateInit()" class="container">
+﻿<form ng-controller="EditVehicleModelController" name="vmdlEditForm" ng-init="EditInit" class="container">
 
     <h4 style="margin-top:20px">Vehicle Model</h4>
     <hr />
+
 
     <div class="form-group">
         <label class="control-label col-md-2" for="Name">Name</label>
@@ -19,7 +20,7 @@
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Snimi" class="btn btn-default" ng-click="update()" />
+            <input type="submit" value="Save" class="btn btn-default" ng-click="EditVehModel()" />
         </div>
     </div>
 </form>
