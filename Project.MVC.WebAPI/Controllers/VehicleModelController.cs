@@ -83,7 +83,7 @@ namespace Project.MVC.WebAPI.Controllers
                 else
                 {
                     find.Name = AddObj.Name;
-                    find.Abrv = AddObj.Abrv;
+                    find.Abrv = AddObj.Abrv;   
                 }
                 var response = await VehicleModelService.UpdateAsync(Mapper.Map<IVehicleModelDomainModel>(AddObj));
                 return Request.CreateResponse(HttpStatusCode.OK, response);

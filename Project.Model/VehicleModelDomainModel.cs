@@ -11,12 +11,15 @@ namespace Project.Model
 {
     public class VehicleModelDomainModel : IVehicleModelDomainModel
     {
-        public string Abrv
+        public Guid VehicleModelId
         {
             get; set;
         }
-
-        public Guid VehicleModelId
+        public Guid VehicleMakeId
+        {
+            get;set;
+        }
+        public string Abrv
         {
             get; set;
         }
@@ -26,10 +29,7 @@ namespace Project.Model
             get;set;
         }
 
-        public Guid VehicleMakeId
-        {
-            get;set;
-        }
+       
         public virtual IVehicleMakeDomainModel VehicleMake { get; set; }//poziva jedan make di je npr id=1; - 1 make ima vise modela. Zato što svaki model ima 1 make 
 
     }

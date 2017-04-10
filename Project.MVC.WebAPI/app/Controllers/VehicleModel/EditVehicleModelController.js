@@ -4,8 +4,11 @@ function vmdlEditController($scope, $http, $stateParams, $window, $location) {
 
     $scope.EditInit = function () {
         var id = $stateParams.VmdlId;
-        $http.get('/api/VehicleModel/get?Id=' + id).then(function (data) {
-            $scope.data = data;
+        $http.get('/api/VehicleModel/get?Id=' + id).then(function (response)
+        {
+            $scope.VehicleMakeId = response.data.VehicleMakeId;
+            $scope.Name = response.data.Name;
+            $scope.Abrv = response.data.Abrv;
         })
         .error(function (data) {
             $window.alert("Error! GREŠKA JE U INITU " + data.Message);
@@ -15,9 +18,10 @@ function vmdlEditController($scope, $http, $stateParams, $window, $location) {
     $scope.EditVehModel = function () {
         var id = $stateParams.VmdlId;
         //var idMake = $stateParams.VmkId;
-        if ($scope.Name != null && $scope.Abrv != null) {// && idMake != null
+        if ($scope.Name != null && $scope.Abrv != null && $scope.VehicleMakeId) {// && idMake != null
             var VehicleModel = {
                 VehicleModelId: id,
+              //  VehicleMakeId:  $scope.VehicleMakeId,
                // VehicleMakeId: idMake,
                 Name: $scope.Name,
                 Abrv: $scope.Abrv
